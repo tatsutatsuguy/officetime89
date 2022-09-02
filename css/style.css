@@ -1,0 +1,97 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px #5f1b68;
+}
+h2 {
+  text-align: left;
+  color: #5f1b68;
+  text-shadow: 2px 2px #e6aae1;
+  background-image: url("../img/namebox.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+h3 {
+  text-align: center;
+  color: #5f1b68;
+  text-shadow: 2px 2px #e6aae1;
+  padding: 2px;
+}
+h4 {
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px #5f1b68;
+}
+h5 {
+  text-align: left;
+  color: #5f1b68;
+  text-shadow: 2px 2px #e6aae1;
+}
+hr {
+  width: 100%;
+  border: 10px dotted !important;
+  border-style: none none dotted !important;
+  color: #329fa5 !important;
+}
+
+.smalltext {
+  font-size: 80%;
+  font-style: italic;
+}
+
+.navbardrp {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+.flex-1 {flex: 1;}
+
+.main {position: absolute;margin-left: 10%;margin-top: 20%;}
+
+.staff {margin: 50px;}
+
+.aboutbox {
+  background-color: #37b4ba;
+}
+
+.aboutbox2 {
+  background-color: #163e40;
+}
+
+.card-text {
+  color: white;
+}
+
+.namebox {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+}
+
+.explore {
+  background-color: #e6aae1;
+  width: 100%;
+  background-image: url("../img/bg_strp.png");
+}
+
+.reviews {
+  background-color: #e6aae1;
+  text-align: center;
+  padding: 100px 1px 100px 1px;
+  background-image: url("../img/bg_strp.png");
+}
+.imgspc {
+  padding: 2px !important;
+}
+.darktext {
+  font-weight: bold;
+  text-align: left;
+  color: #5f1b68;
+}
