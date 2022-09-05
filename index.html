@@ -6,13 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link href="css/style.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="css/lytebox.css" type="text/css" media="screen" />
   <title>Office Time '89'</title>
 </head>
 
-<body>
+<body onresize="resize()">
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbardrp">
       <div class="container-fluid">
@@ -40,7 +39,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right nav-item">
             <li>
-              <a href="http://furnacestreetstudio.com" target="_blank" class="nav-link" data-toggle="tooltip" title="Visit Furnace Street Studio for more!">  FSStudio <div class="vr"></div></a>
+              <a href="http://furnacestreetstudio.com" target="_blank" class="nav-link" data-toggle="tooltip" title="Visit Furnace Street Studio for more!"> FSStudio <div class="vr"></div></a>
             </li>
             <li>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -52,48 +51,24 @@
       </div>
     </nav>
   </header>
+
   <!--MAIN -->
   <div class="main" id="main">
-    <!-- Title -->
-    <div class="row">
-      <div class="col-lg-6">
-        <h1 class="big-heading" class"download">Download and Play</h1>
 
-        <!--  -->
+    <!-- Hero -->
+    <div class="row">
+      <div class="col-lg-8 mt-5">
+        <h1 class="big-heading" class"download">Download and Play</h1>
         <div class="container">
-          <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Download Now!
           </button>
-
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Download</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>
-                    <h6>Chose your operating system:</h6>
-                  <p>
-                    <a href="http://colorcraftn01.ddns.net:8081/officetime89/file/OfficeTime1989-0.9.5-pc.zip">PC</a> <span class="smalltext">(132Mb file)</span> || <a href="http://colorcraftn01.ddns.net:8081/officetime89/file/OfficeTime1989-0.9.5-mac.zip">MAC</a> <span class="smalltext">(114Mb file)</span> || <a href="http://colorcraftn01.ddns.net:8081/officetime89/file/OfficeTime1989-0.9.5-linux.tar.bz2">Linux</a> <span class="smalltext">(119Mb file)</span><br />
-                    or download from itch.io below.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-primary" href="https://furnacestreetstudio.itch.io/sol-officeromance89" target="_blank" role="button">itch.io Download</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <!--  -->
       </div>
     </div>
   </div>
-  <img src="img/ot89_banner_2560.png" class="img-fluid navbardrp" alt="OfficeTime89 Splash Image">
+  <div id="hero"></div>
+  </div>
 
   <!-- REVIEWS -->
   <div class="reviews navbardrp" id="reviews">
@@ -104,77 +79,74 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <!--card--->
-            <div class="row d-flex justify-content-center">
-              <div class="col-md-8">
-                <div class="card">
-                  <div class="card-body m-3">
-                    <div class="row">
-                      <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
-                        <img src="img/itchio.png"
-                          class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
-                      </div>
-                      <div class="col-lg-8">
-                        <p class="text-muted fw-light mb-4">
-                          " I'm blown away by how fun this game is! It has a wonderful relaxed atmosphere that makes you want to learn all about the characters. I can't wait to see more!"
-                        </p>
-                        <p class="fw-bold lead mb-2"><strong>Alec Brown</strong></p>
-                        <p class="fw-bold text-muted mb-0">Itch.io Member</p>
-                      </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-body m-3">
+                  <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                      <img src="img/itchio.png" class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+                    </div>
+                    <div class="col-lg-8">
+                      <p class="text-muted fw-light mb-4">
+                        " I'm blown away by how fun this game is! It has a wonderful relaxed atmosphere that makes you want to learn all about the characters. I can't wait to see more!"
+                      </p>
+                      <p class="fw-bold lead mb-2"><strong>Alec Brown</strong></p>
+                      <p class="fw-bold text-muted mb-0">Itch.io Member</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
           <!--card--->
         </div>
         <div class="carousel-item">
           <!--card--->
-            <div class="row d-flex justify-content-center">
-              <div class="col-md-8">
-                <div class="card">
-                  <div class="card-body m-3">
-                    <div class="row">
-                      <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
-                        <img src="img/newgrounds.png"
-                          class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
-                      </div>
-                      <div class="col-lg-8">
-                        <p class="text-muted fw-light mb-4">
-                          " I'm in love with this game.  The hand-drawn style, and the 80's theme, make it such a comfortable game to lose yourself in. 5 stars as far as I'm concerned."
-                        </p>
-                        <p class="fw-bold lead mb-2"><strong>Nick BringHam</strong></p>
-                        <p class="fw-bold text-muted mb-0">Newgrounds Subscriber</p>
-                      </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-body m-3">
+                  <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                      <img src="img/newgrounds.png" class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+                    </div>
+                    <div class="col-lg-8">
+                      <p class="text-muted fw-light mb-4">
+                        " I'm in love with this game. The hand-drawn style, and the 80's theme, make it such a comfortable game to lose yourself in. 5 stars as far as I'm concerned."
+                      </p>
+                      <p class="fw-bold lead mb-2"><strong>Nick BringHam</strong></p>
+                      <p class="fw-bold text-muted mb-0">Newgrounds Subscriber</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
           <!--card--->
         </div>
         <div class="carousel-item">
           <!--card--->
-            <div class="row d-flex justify-content-center">
-              <div class="col-md-8">
-                <div class="card">
-                  <div class="card-body m-3">
-                    <div class="row">
-                      <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
-                        <img src="img/google.jpg"
-                          class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
-                      </div>
-                      <div class="col-lg-8">
-                        <p class="text-muted fw-light mb-4">
-                          " This has to be the best dating sim on Android PERIOD. I'm so happy I stumbled upon this game. These types of games are my thing, and you really went all out for fans like me with this gem. "
-                        </p>
-                        <p class="fw-bold lead mb-2"><strong>Troy McKale</strong></p>
-                        <p class="fw-bold text-muted mb-0">Google Play User</p>
-                      </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-body m-3">
+                  <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                      <img src="img/google.jpg" class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+                    </div>
+                    <div class="col-lg-8">
+                      <p class="text-muted fw-light mb-4">
+                        " This has to be the best dating sim on Android PERIOD. I'm so happy I stumbled upon this game. These types of games are my thing, and you really went all out for fans like me with this gem. "
+                      </p>
+                      <p class="fw-bold lead mb-2"><strong>Troy McKale</strong></p>
+                      <p class="fw-bold text-muted mb-0">Google Play User</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
           <!--card--->
         </div>
       </div>
@@ -211,7 +183,7 @@
 
             <h4 class="card-title white-text">Cathy</h4>
             <!--Text-->
-            <p class="card-text white-text">Say hello to our personable receptionist, Cathy.  She’s a humorous and warm person.  A perfect fit for RAITA’s front desk.  If you need any guidance, she can point you in the right direction.</p>
+            <p class="card-text white-text">Say hello to our personable receptionist, Cathy. She’s a humorous and warm person. A perfect fit for RAITA’s front desk. If you need any guidance, she can point you in the right direction.</p>
           </div>
         </div>
         <!--/.Card-->
@@ -235,7 +207,8 @@
             <!--Title-->
             <h4 class="card-title white-text">G.G.Greg</h4>
             <!--Text-->
-            <p class="card-text white-text">Meet our software department lead, and your immediate supervisor.  G.G.Greg can help you out if you have any job questions.  He will also be your trainer, so make sure you listen to the advice he has to give.</p>
+            <p class="card-text white-text">Meet our software department lead, and your immediate supervisor. G.G.Greg can help you out if you have any job questions. He will also be your trainer, so make sure you listen to the advice he has to give.
+            </p>
           </div>
         </div>
         <!--/.Card-->
@@ -260,7 +233,8 @@
             <!--Title-->
             <h4 class="card-title white-text">Cindy</h4>
             <!--Text-->
-            <p class="card-text white-text">Aside from you, Cindy is our most recent hire.  She is a junior developer that shares an office with you.  For projects to be successful you’ll need to communicate well with each other.  We hope you get along!</p>
+            <p class="card-text white-text">Aside from you, Cindy is our most recent hire. She is a junior developer that shares an office with you. For projects to be successful you’ll need to communicate well with each other. We hope you get along!
+            </p>
           </div>
         </div>
         <!--/.Card-->
@@ -284,7 +258,8 @@
             <!--Title-->
             <h4 class="card-title white-text">Paige</h4>
             <!--Text-->
-            <p class="card-text white-text">Paige is our accounts officer.  She works reports to our office’s program director.  She is very busy, but she’ll be able to help you with any fiscal questions.  She also shares an office with our graphic designer.</p>
+            <p class="card-text white-text">Paige is our accounts officer. She works reports to our office’s program director. She is very busy, but she’ll be able to help you with any fiscal questions. She also shares an office with our graphic
+              designer.</p>
           </div>
         </div>
         <!--/.Card-->
@@ -308,7 +283,8 @@
             <!--Title-->
             <h4 class="card-title white-text">Pauline</h4>
             <!--Text-->
-            <p class="card-text white-text">Say “hello” to our resident graphic designer.  Pauline can be a bit playful and aloof sometimes, but she is a hard worker, and it shows in her work.  She’s always willing to hear your advice for projects, so feel free to approach her.</p>
+            <p class="card-text white-text">Say “hello” to our resident graphic designer. Pauline can be a bit playful and aloof sometimes, but she is a hard worker, and it shows in her work. She’s always willing to hear your advice for projects, so
+              feel free to approach her.</p>
           </div>
         </div>
         <!--/.Card-->
@@ -332,7 +308,8 @@
             <!--Title-->
             <h4 class="card-title white-text">Sarah</h4>
             <!--Text-->
-            <p class="card-text white-text">Sarah is our Program Director.  She is often overwhelmed by all the workload, and might seem a bit short with staff sometimes, but she is one of our most important staff.  Please show your support, and she and RAITA will reciprocate.</p>
+            <p class="card-text white-text">Sarah is our Program Director. She is often overwhelmed by all the workload, and might seem a bit short with staff sometimes, but she is one of our most important staff. Please show your support, and she
+              and RAITA will reciprocate.</p>
           </div>
         </div>
         <!--/.Card-->
@@ -340,7 +317,7 @@
       </div>
     </div>
   </div>
-<!--/ .STAFF -->
+  <!--/ .STAFF -->
 
   <!-- EXPLORE -->
   <div class="explore text-center navbardrp" id="explore"><br /><br />
@@ -360,42 +337,42 @@
             </p>
             <p align="justify">
               Make sure you don't wonder around town too much in the
-              morning or you might be late to the office.  Work hard to obtain more money, or spend your time
+              morning or you might be late to the office. Work hard to obtain more money, or spend your time
               socializing with your coworkers to build and make new relationships.
             </p>
             <p>
-              <h5>Tips:</h5>
-              Seems like a certain overly ambitious coworker has been working on weekends. It might help your
-              career to investigate on the weekends. It may even help advance your relationship with someone too!
+            <h5>Tips:</h5>
+            Seems like a certain overly ambitious coworker has been working on weekends. It might help your
+            career to investigate on the weekends. It may even help advance your relationship with someone too!
             </p>
           </div>
           <!-- Column -->
           <div class="p-3 flex-1">
             <h2 class="pb-3 font-weight-bold">Out on the Town</h2>
-            <p align="justify">There are plenty of places to go, and sites to see all over town.  Stop in for a
-              coffee or get a refreshing workout after hours at the gym.  There is also a Mall downtown that is full
-              of shops and eateries for it’s customers.  Town life offers a variety of places to go on dates, or
-              just socialize.  Make sure you are getting the most out of your weekends by visiting all the shops!</p>
-              <p align="justify">
-                Ordering food will give you energy and and going places like the barber or the gym will increase
-                your attractiveness.  Everything cost money though, so make sure you’re working hard enough to
-                earn all the perks.
-              </p>
-              <h5>Tips:</h5>
-              Your coworkers all live in the same town.  Try visiting various places in the morning before work and
-              maybe you spend some time walking to work together.
+            <p align="justify">There are plenty of places to go, and sites to see all over town. Stop in for a
+              coffee or get a refreshing workout after hours at the gym. There is also a Mall downtown that is full
+              of shops and eateries for it’s customers. Town life offers a variety of places to go on dates, or
+              just socialize. Make sure you are getting the most out of your weekends by visiting all the shops!</p>
+            <p align="justify">
+              Ordering food will give you energy and and going places like the barber or the gym will increase
+              your attractiveness. Everything cost money though, so make sure you’re working hard enough to
+              earn all the perks.
+            </p>
+            <h5>Tips:</h5>
+            Your coworkers all live in the same town. Try visiting various places in the morning before work and
+            maybe you spend some time walking to work together.
             </p>
           </div>
           <!-- Column -->
           <div class="p-0 flex-1">
-          <h2 class="pb-3 font-weight-bold">Apartment Life</h2>
-            <p align="justify">Your new apartment might be small, but it’s also cozy.  Within your apartment you’ll
-              find all the amenities needed for rest and leisure time.  You can reach out to your friends on your
+            <h2 class="pb-3 font-weight-bold">Apartment Life</h2>
+            <p align="justify">Your new apartment might be small, but it’s also cozy. Within your apartment you’ll
+              find all the amenities needed for rest and leisure time. You can reach out to your friends on your
               phone, order food, listen to music and of course get a good night’s sleep so you have plenty of energy
               for a productive day at the office</p>
-              <h5>Tips:</h5>
-              If you’re feeling drained try giving your mother a call.  Sometimes a pep talk from a loved one can
-              really motivate you.
+            <h5>Tips:</h5>
+            If you’re feeling drained try giving your mother a call. Sometimes a pep talk from a loved one can
+            really motivate you.
             </p>
           </div>
           <!-- Column -->
@@ -467,11 +444,11 @@
       </div>
       <div class="darktext col-md-4">
         <label for="validationDefault03" class="form-label">Email</label>
-          <input type="email" class="form-control" id="validationDefault03" value="" required>
+        <input type="email" class="form-control" id="validationDefault03" value="" required>
       </div>
       <div class="col-12">
         <div class="row justify-content-md-center">
-            By submitting you agree to the <a href="policy.html" target="_blank">terms & conditions.</a>
+          By submitting you agree to the <a href="policy.html" target="_blank">terms & conditions.</a>
         </div>
       </div>
       <div class="col-12">
@@ -484,14 +461,43 @@
   <!-- FOOTER -->
   <footer class="container m-2">
     <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2019 - <script type="text/javascript">document.write(new Date().getFullYear());</script>
+    <p>&copy; 2019 - <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script>
       <a href="http://furnacestreetstudio.com/" target="_blank" data-toggle="tooltip" title="Visit Furnace Street Studio for more!">Furnace Street Studio.</a> &middot;
-      <a href="policy.html" target="_blank" data-toggle="tooltip" title="Read Use Policy">Privacy</a> &middot; <a href="policy.html" target="_blank" data-toggle="tooltip" title="Read Use Policy">Terms</a></p>
+      <a href="policy.html" target="_blank" data-toggle="tooltip" title="Read Use Policy">Privacy</a> &middot; <a href="policy.html" target="_blank" data-toggle="tooltip" title="Read Use Policy">Terms</a>
+    </p>
   </footer>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  <!-- lytebox plugin *3rd party plugin/see above-->
-      <script type="text/javascript" src="js/lytebox.js"></script>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Download</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+          <h6>Chose your operating system:</h6>
+          <p>
+            <a href="http://colorcraftn01.ddns.net:8081/officetime89/file/OfficeTime1989-0.9.5-pc.zip">PC</a> <span class="smalltext">(132Mb file)</span> || <a
+              href="http://colorcraftn01.ddns.net:8081/officetime89/file/OfficeTime1989-0.9.5-mac.zip">MAC</a> <span class="smalltext">(114Mb file)</span> || <a
+              href="http://colorcraftn01.ddns.net:8081/officetime89/file/OfficeTime1989-0.9.5-linux.tar.bz2">Linux</a> <span class="smalltext">(119Mb file)</span><br />
+            or download from itch.io below.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-primary" href="https://furnacestreetstudio.itch.io/sol-officeromance89" target="_blank" role="button">itch.io Download</a>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- lytebox plugin *3rd party plugin/see above-->
+    <script type="text/javascript" src="js/lytebox.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
